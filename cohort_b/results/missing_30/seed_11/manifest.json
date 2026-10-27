@@ -1,0 +1,83 @@
+{
+  "generator": "generate_synthea_sites.py",
+  "source": "Synthea CSV/FHIR synthetic records",
+  "synthetic_ground_truth": true,
+  "config": {
+    "seed": 11,
+    "sites": 5,
+    "shared_rate": 0.7,
+    "missing_rate": 0.3,
+    "format_noise_rate": 0.1,
+    "duplicate_rate": 0.05,
+    "time_jitter_minutes": 5,
+    "target_definition": {
+      "keyword": "hypertension",
+      "event_type": "condition",
+      "matching_rule": "casefold substring in label",
+      "patient_label_rule": "any matching condition in retained source input; copied to all patient events",
+      "events": 78092,
+      "positive_events": 269,
+      "patients": 1152,
+      "positive_patients": 269
+    }
+  },
+  "input_events": 78092,
+  "input_patients": 1152,
+  "output_records": 309683,
+  "event_type_counts": {
+    "allergy": 2798,
+    "condition": 42961,
+    "encounter": 43186,
+    "immunization": 21673,
+    "medication": 32829,
+    "observation": 108920,
+    "procedure": 42673
+  },
+  "sites": [
+    {
+      "site_id": "logical-site-1",
+      "path": "sites\\site_1.jsonl",
+      "records": 63051,
+      "patients": 889,
+      "sha256": "55e411858b857671113602a94a8e7150c1049456f2e5709bfe4c8044bf73bf31",
+      "schema_variant": "canonical"
+    },
+    {
+      "site_id": "logical-site-2",
+      "path": "sites\\site_2.jsonl",
+      "records": 62827,
+      "patients": 900,
+      "sha256": "4ea752869f2fdd04363ca62af1dd97aea83759fab1dbefe9aba3ccd0568571e2",
+      "schema_variant": "wide"
+    },
+    {
+      "site_id": "logical-site-3",
+      "path": "sites\\site_3.jsonl",
+      "records": 60718,
+      "patients": 872,
+      "sha256": "d18133f40cdd6bd807818e5c4c6a26cb5ac82237b49d7c8cbc5404aa7d3af405",
+      "schema_variant": "offset"
+    },
+    {
+      "site_id": "logical-site-4",
+      "path": "sites\\site_4.jsonl",
+      "records": 61847,
+      "patients": 889,
+      "sha256": "ccbd7a9ded01d5c013972b2e29d9134c847da448bb52ff30ad6787843d01360b",
+      "schema_variant": "canonical"
+    },
+    {
+      "site_id": "logical-site-5",
+      "path": "sites\\site_5.jsonl",
+      "records": 61240,
+      "patients": 880,
+      "sha256": "f321e8b09447fbe0e4a8af400112bbfaab73df2836530c3d69a4f8af6639acf9",
+      "schema_variant": "wide"
+    }
+  ],
+  "gold_truth": {
+    "path": "gold_truth.jsonl",
+    "records": 309683,
+    "sha256": "d535a6b801685ba85d338614d2fa34b1b472da6ece1329e31de5ef6c5358d0fd"
+  }
+}

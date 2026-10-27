@@ -1,0 +1,2392 @@
+{
+  "config": {
+    "feature_dim": 128,
+    "rounds": 20,
+    "local_epochs": 2,
+    "lr": 0.5,
+    "prox_mu": 0.01,
+    "seed": 11,
+    "exclude_event_types": [
+      "condition"
+    ],
+    "missing_patient_policy": "exclude_from_patient_task",
+    "threshold_selection": "local_train_quantile_f1_or_federated_train_count_f1",
+    "split_policy": "gold_patient_grouped"
+  },
+  "split_audit": {
+    "policy": "gold_patient_grouped",
+    "truth_path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\gold_truth.jsonl",
+    "unique_gold_patients": 1152,
+    "train_gold_patients": 922,
+    "test_gold_patients": 230,
+    "train_test_gold_overlap": 0,
+    "site_patient_mappings": 4425
+  },
+  "modes": {
+    "raw": {
+      "sites": [
+        {
+          "path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\sites\\site_1.jsonl",
+          "patients": 888,
+          "records": 63051,
+          "train": 711,
+          "test": 177,
+          "positive": 197,
+          "excluded_event_types": [
+            "condition"
+          ],
+          "excluded_records": 9190,
+          "missing_patient_records": 0,
+          "missing_patient_positive_records": 0,
+          "collapsed_feature_records": 0,
+          "split_policy": "gold_patient_grouped",
+          "train_count": 711,
+          "x_train_end": 711,
+          "effective_train_weight": 711.0
+        },
+        {
+          "path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\sites\\site_2.jsonl",
+          "patients": 899,
+          "records": 62827,
+          "train": 721,
+          "test": 178,
+          "positive": 205,
+          "excluded_event_types": [
+            "condition"
+          ],
+          "excluded_records": 9115,
+          "missing_patient_records": 0,
+          "missing_patient_positive_records": 0,
+          "collapsed_feature_records": 0,
+          "split_policy": "gold_patient_grouped",
+          "train_count": 721,
+          "x_train_end": 721,
+          "effective_train_weight": 721.0
+        },
+        {
+          "path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\sites\\site_3.jsonl",
+          "patients": 871,
+          "records": 60718,
+          "train": 703,
+          "test": 168,
+          "positive": 205,
+          "excluded_event_types": [
+            "condition"
+          ],
+          "excluded_records": 8836,
+          "missing_patient_records": 0,
+          "missing_patient_positive_records": 0,
+          "collapsed_feature_records": 0,
+          "split_policy": "gold_patient_grouped",
+          "train_count": 703,
+          "x_train_end": 703,
+          "effective_train_weight": 703.0
+        },
+        {
+          "path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\sites\\site_4.jsonl",
+          "patients": 888,
+          "records": 61847,
+          "train": 712,
+          "test": 176,
+          "positive": 194,
+          "excluded_event_types": [
+            "condition"
+          ],
+          "excluded_records": 8993,
+          "missing_patient_records": 0,
+          "missing_patient_positive_records": 0,
+          "collapsed_feature_records": 0,
+          "split_policy": "gold_patient_grouped",
+          "train_count": 712,
+          "x_train_end": 712,
+          "effective_train_weight": 712.0
+        },
+        {
+          "path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\sites\\site_5.jsonl",
+          "patients": 879,
+          "records": 61240,
+          "train": 702,
+          "test": 177,
+          "positive": 211,
+          "excluded_event_types": [
+            "condition"
+          ],
+          "excluded_records": 8966,
+          "missing_patient_records": 0,
+          "missing_patient_positive_records": 0,
+          "collapsed_feature_records": 0,
+          "split_policy": "gold_patient_grouped",
+          "train_count": 702,
+          "x_train_end": 702,
+          "effective_train_weight": 702.0
+        }
+      ],
+      "methods": {
+        "local_only": {
+          "metrics": {
+            "n": 876,
+            "positive": 280,
+            "predicted_positive": 286,
+            "accuracy": 0.8036942664394578,
+            "balanced_accuracy": 0.7784362068723588,
+            "f1": 0.6963573632332083,
+            "auroc": 0.9048703477076468,
+            "auprc": 0.8463495495878848,
+            "logloss": 0.6313438461071582
+          },
+          "per_site": [
+            {
+              "n": 177,
+              "accuracy": 0.7570621468926554,
+              "positive": 55,
+              "predicted_positive": 80,
+              "balanced_accuracy": 0.7788375558867362,
+              "f1": 0.6814814814814815,
+              "auroc": 0.902086438152012,
+              "auprc": 0.8483079311186321,
+              "logloss": 0.6217663840655804,
+              "threshold": 0.20510748861179853
+            },
+            {
+              "n": 178,
+              "accuracy": 0.7808988764044944,
+              "positive": 57,
+              "predicted_positive": 50,
+              "balanced_accuracy": 0.7321299115557489,
+              "f1": 0.6355140186915887,
+              "auroc": 0.886762360446571,
+              "auprc": 0.811007347739558,
+              "logloss": 0.6319073248120478,
+              "threshold": 0.21664110979373524
+            },
+            {
+              "n": 168,
+              "accuracy": 0.8035714285714286,
+              "positive": 57,
+              "predicted_positive": 46,
+              "balanced_accuracy": 0.7574679943100996,
+              "f1": 0.6796116504854369,
+              "auroc": 0.8952110004741584,
+              "auprc": 0.8411411106221569,
+              "logloss": 0.6533707487614399,
+              "threshold": 0.22229962116997531
+            },
+            {
+              "n": 176,
+              "accuracy": 0.8181818181818182,
+              "positive": 55,
+              "predicted_positive": 67,
+              "balanced_accuracy": 0.8181818181818182,
+              "f1": 0.7377049180327869,
+              "auroc": 0.9158527422990232,
+              "auprc": 0.855852581770996,
+              "logloss": 0.6338365595903335,
+              "threshold": 0.20093278583456786
+            },
+            {
+              "n": 177,
+              "accuracy": 0.8587570621468926,
+              "positive": 56,
+              "predicted_positive": 43,
+              "balanced_accuracy": 0.8055637544273908,
+              "f1": 0.7474747474747475,
+              "auroc": 0.9244391971664699,
+              "auprc": 0.8754387766880806,
+              "logloss": 0.6158382133063894,
+              "threshold": 0.23473564985800435
+            }
+          ],
+          "history": [],
+          "communication_bytes": 0
+        },
+        "fedavg": {
+          "metrics": {
+            "n": 876,
+            "positive": 280,
+            "predicted_positive": 306,
+            "accuracy": 0.7556690397458823,
+            "balanced_accuracy": 0.731800204716708,
+            "f1": 0.6356588460983252,
+            "auroc": 0.860342913287351,
+            "auprc": 0.7738466280423011,
+            "logloss": 0.6432981006483027
+          },
+          "per_site": [
+            {
+              "n": 177,
+              "accuracy": 0.7401129943502824,
+              "positive": 55,
+              "predicted_positive": 69,
+              "balanced_accuracy": 0.7315946348733233,
+              "f1": 0.6290322580645161,
+              "auroc": 0.8676602086438152,
+              "auprc": 0.7914594448106425,
+              "logloss": 0.6297739928226582,
+              "threshold": 0.21000000000000002
+            },
+            {
+              "n": 178,
+              "accuracy": 0.7191011235955056,
+              "positive": 57,
+              "predicted_positive": 73,
+              "balanced_accuracy": 0.7145135566188198,
+              "f1": 0.6153846153846154,
+              "auroc": 0.8534145280556764,
+              "auprc": 0.7569864981017774,
+              "logloss": 0.6424473434725974,
+              "threshold": 0.21000000000000002
+            },
+            {
+              "n": 168,
+              "accuracy": 0.7440476190476191,
+              "positive": 57,
+              "predicted_positive": 54,
+              "balanced_accuracy": 0.7081555239449976,
+              "f1": 0.6126126126126126,
+              "auroc": 0.8452663189505295,
+              "auprc": 0.7642124620257572,
+              "logloss": 0.6696136551833982,
+              "threshold": 0.21000000000000002
+            },
+            {
+              "n": 176,
+              "accuracy": 0.7897727272727273,
+              "positive": 55,
+              "predicted_positive": 54,
+              "balanced_accuracy": 0.7528925619834711,
+              "f1": 0.6605504587155964,
+              "auroc": 0.8751314800901577,
+              "auprc": 0.7837498775162477,
+              "logloss": 0.6350212829491381,
+              "threshold": 0.21000000000000002
+            },
+            {
+              "n": 177,
+              "accuracy": 0.7853107344632768,
+              "positive": 56,
+              "predicted_positive": 56,
+              "balanced_accuracy": 0.751844746162928,
+              "f1": 0.6607142857142857,
+              "auroc": 0.8602420306965761,
+              "auprc": 0.772824857757081,
+              "logloss": 0.6396342288137217,
+              "threshold": 0.21000000000000002
+            }
+          ],
+          "history": [
+            {
+              "round": 1,
+              "sites": 5
+            },
+            {
+              "round": 2,
+              "sites": 5
+            },
+            {
+              "round": 3,
+              "sites": 5
+            },
+            {
+              "round": 4,
+              "sites": 5
+            },
+            {
+              "round": 5,
+              "sites": 5
+            },
+            {
+              "round": 6,
+              "sites": 5
+            },
+            {
+              "round": 7,
+              "sites": 5
+            },
+            {
+              "round": 8,
+              "sites": 5
+            },
+            {
+              "round": 9,
+              "sites": 5
+            },
+            {
+              "round": 10,
+              "sites": 5
+            },
+            {
+              "round": 11,
+              "sites": 5
+            },
+            {
+              "round": 12,
+              "sites": 5
+            },
+            {
+              "round": 13,
+              "sites": 5
+            },
+            {
+              "round": 14,
+              "sites": 5
+            },
+            {
+              "round": 15,
+              "sites": 5
+            },
+            {
+              "round": 16,
+              "sites": 5
+            },
+            {
+              "round": 17,
+              "sites": 5
+            },
+            {
+              "round": 18,
+              "sites": 5
+            },
+            {
+              "round": 19,
+              "sites": 5
+            },
+            {
+              "round": 20,
+              "sites": 5
+            }
+          ],
+          "communication_bytes": 218320,
+          "model_update_upload_bytes": 103200,
+          "model_broadcast_bytes": 103200,
+          "threshold_aggregation_bytes": 11920,
+          "linkage_sketch_upload_bytes": 0,
+          "linkage_weight_download_bytes": 0,
+          "communication_scope": "numeric/digest payload estimate; excludes identifiers, headers, transport and cryptographic overhead"
+        },
+        "fedprox": {
+          "metrics": {
+            "n": 876,
+            "positive": 280,
+            "predicted_positive": 306,
+            "accuracy": 0.7556690397458823,
+            "balanced_accuracy": 0.731800204716708,
+            "f1": 0.6356588460983252,
+            "auroc": 0.8603745238452774,
+            "auprc": 0.7738691878618226,
+            "logloss": 0.6433369358774625
+          },
+          "per_site": [
+            {
+              "n": 177,
+              "accuracy": 0.7401129943502824,
+              "positive": 55,
+              "predicted_positive": 69,
+              "balanced_accuracy": 0.7315946348733233,
+              "f1": 0.6290322580645161,
+              "auroc": 0.8676602086438152,
+              "auprc": 0.7914594448106425,
+              "logloss": 0.6298157807029061,
+              "threshold": 0.21000000000000002
+            },
+            {
+              "n": 178,
+              "accuracy": 0.7191011235955056,
+              "positive": 57,
+              "predicted_positive": 73,
+              "balanced_accuracy": 0.7145135566188198,
+              "f1": 0.6153846153846154,
+              "auroc": 0.8534145280556764,
+              "auprc": 0.7569864981017774,
+              "logloss": 0.6424875872912442,
+              "threshold": 0.21000000000000002
+            },
+            {
+              "n": 168,
+              "accuracy": 0.7440476190476191,
+              "positive": 57,
+              "predicted_positive": 54,
+              "balanced_accuracy": 0.7081555239449976,
+              "f1": 0.6126126126126126,
+              "auroc": 0.8454243717401612,
+              "auprc": 0.7643252611233644,
+              "logloss": 0.6696521542123209,
+              "threshold": 0.21000000000000002
+            },
+            {
+              "n": 176,
+              "accuracy": 0.7897727272727273,
+              "positive": 55,
+              "predicted_positive": 54,
+              "balanced_accuracy": 0.7528925619834711,
+              "f1": 0.6605504587155964,
+              "auroc": 0.8751314800901577,
+              "auprc": 0.7837498775162477,
+              "logloss": 0.6350573446265901,
+              "threshold": 0.21000000000000002
+            },
+            {
+              "n": 177,
+              "accuracy": 0.7853107344632768,
+              "positive": 56,
+              "predicted_positive": 56,
+              "balanced_accuracy": 0.751844746162928,
+              "f1": 0.6607142857142857,
+              "auroc": 0.8602420306965761,
+              "auprc": 0.772824857757081,
+              "logloss": 0.6396718125542514,
+              "threshold": 0.21000000000000002
+            }
+          ],
+          "history": [
+            {
+              "round": 1,
+              "sites": 5
+            },
+            {
+              "round": 2,
+              "sites": 5
+            },
+            {
+              "round": 3,
+              "sites": 5
+            },
+            {
+              "round": 4,
+              "sites": 5
+            },
+            {
+              "round": 5,
+              "sites": 5
+            },
+            {
+              "round": 6,
+              "sites": 5
+            },
+            {
+              "round": 7,
+              "sites": 5
+            },
+            {
+              "round": 8,
+              "sites": 5
+            },
+            {
+              "round": 9,
+              "sites": 5
+            },
+            {
+              "round": 10,
+              "sites": 5
+            },
+            {
+              "round": 11,
+              "sites": 5
+            },
+            {
+              "round": 12,
+              "sites": 5
+            },
+            {
+              "round": 13,
+              "sites": 5
+            },
+            {
+              "round": 14,
+              "sites": 5
+            },
+            {
+              "round": 15,
+              "sites": 5
+            },
+            {
+              "round": 16,
+              "sites": 5
+            },
+            {
+              "round": 17,
+              "sites": 5
+            },
+            {
+              "round": 18,
+              "sites": 5
+            },
+            {
+              "round": 19,
+              "sites": 5
+            },
+            {
+              "round": 20,
+              "sites": 5
+            }
+          ],
+          "communication_bytes": 218320,
+          "model_update_upload_bytes": 103200,
+          "model_broadcast_bytes": 103200,
+          "threshold_aggregation_bytes": 11920,
+          "linkage_sketch_upload_bytes": 0,
+          "linkage_weight_download_bytes": 0,
+          "communication_scope": "numeric/digest payload estimate; excludes identifiers, headers, transport and cryptographic overhead"
+        },
+        "centralized_upper_bound": {
+          "metrics": {
+            "n": 876,
+            "positive": 280,
+            "predicted_positive": 318,
+            "accuracy": 0.7488638424674419,
+            "balanced_accuracy": 0.7297094643853212,
+            "f1": 0.6322989989658878,
+            "auroc": 0.8602522708522109,
+            "auprc": 0.7736911974306343,
+            "logloss": 0.6432957152566621
+          },
+          "per_site": [
+            {
+              "n": 177,
+              "accuracy": 0.7231638418079096,
+              "positive": 55,
+              "predicted_positive": 72,
+              "balanced_accuracy": 0.7192995529061104,
+              "f1": 0.6141732283464567,
+              "auroc": 0.8676602086438152,
+              "auprc": 0.7914594448106425,
+              "logloss": 0.6297842976152612,
+              "threshold": 0.20971040775974784
+            },
+            {
+              "n": 178,
+              "accuracy": 0.7303370786516854,
+              "positive": 57,
+              "predicted_positive": 75,
+              "balanced_accuracy": 0.7320574162679425,
+              "f1": 0.6363636363636364,
+              "auroc": 0.8534145280556764,
+              "auprc": 0.7569864981017774,
+              "logloss": 0.6424527375791415,
+              "threshold": 0.20971040775974784
+            },
+            {
+              "n": 168,
+              "accuracy": 0.7440476190476191,
+              "positive": 57,
+              "predicted_positive": 54,
+              "balanced_accuracy": 0.7081555239449976,
+              "f1": 0.6126126126126126,
+              "auroc": 0.8451082661608977,
+              "auprc": 0.7638291508065327,
+              "logloss": 0.6696018259023021,
+              "threshold": 0.20971040775974784
+            },
+            {
+              "n": 176,
+              "accuracy": 0.7784090909090909,
+              "positive": 55,
+              "predicted_positive": 58,
+              "balanced_accuracy": 0.7495867768595041,
+              "f1": 0.6548672566371682,
+              "auroc": 0.8751314800901577,
+              "auprc": 0.7837498775162477,
+              "logloss": 0.6350322869482042,
+              "threshold": 0.20971040775974784
+            },
+            {
+              "n": 177,
+              "accuracy": 0.768361581920904,
+              "positive": 56,
+              "predicted_positive": 59,
+              "balanced_accuracy": 0.739448051948052,
+              "f1": 0.6434782608695652,
+              "auroc": 0.8599468713105076,
+              "auprc": 0.7724310159179719,
+              "logloss": 0.6396074282384017,
+              "threshold": 0.20971040775974784
+            }
+          ],
+          "history": [],
+          "communication_bytes": 49549280
+        }
+      }
+    },
+    "aligned": {
+      "sites": [
+        {
+          "path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\sites\\site_1.jsonl",
+          "patients": 888,
+          "records": 63051,
+          "train": 711,
+          "test": 177,
+          "positive": 197,
+          "excluded_event_types": [
+            "condition"
+          ],
+          "excluded_records": 9190,
+          "missing_patient_records": 0,
+          "missing_patient_positive_records": 0,
+          "collapsed_feature_records": 0,
+          "split_policy": "gold_patient_grouped",
+          "train_count": 711,
+          "x_train_end": 711,
+          "effective_train_weight": 711.0
+        },
+        {
+          "path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\sites\\site_2.jsonl",
+          "patients": 899,
+          "records": 62827,
+          "train": 721,
+          "test": 178,
+          "positive": 205,
+          "excluded_event_types": [
+            "condition"
+          ],
+          "excluded_records": 9115,
+          "missing_patient_records": 0,
+          "missing_patient_positive_records": 0,
+          "collapsed_feature_records": 0,
+          "split_policy": "gold_patient_grouped",
+          "train_count": 721,
+          "x_train_end": 721,
+          "effective_train_weight": 721.0
+        },
+        {
+          "path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\sites\\site_3.jsonl",
+          "patients": 871,
+          "records": 60718,
+          "train": 703,
+          "test": 168,
+          "positive": 205,
+          "excluded_event_types": [
+            "condition"
+          ],
+          "excluded_records": 8836,
+          "missing_patient_records": 0,
+          "missing_patient_positive_records": 0,
+          "collapsed_feature_records": 0,
+          "split_policy": "gold_patient_grouped",
+          "train_count": 703,
+          "x_train_end": 703,
+          "effective_train_weight": 703.0
+        },
+        {
+          "path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\sites\\site_4.jsonl",
+          "patients": 888,
+          "records": 61847,
+          "train": 712,
+          "test": 176,
+          "positive": 194,
+          "excluded_event_types": [
+            "condition"
+          ],
+          "excluded_records": 8993,
+          "missing_patient_records": 0,
+          "missing_patient_positive_records": 0,
+          "collapsed_feature_records": 0,
+          "split_policy": "gold_patient_grouped",
+          "train_count": 712,
+          "x_train_end": 712,
+          "effective_train_weight": 712.0
+        },
+        {
+          "path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\sites\\site_5.jsonl",
+          "patients": 879,
+          "records": 61240,
+          "train": 702,
+          "test": 177,
+          "positive": 211,
+          "excluded_event_types": [
+            "condition"
+          ],
+          "excluded_records": 8966,
+          "missing_patient_records": 0,
+          "missing_patient_positive_records": 0,
+          "collapsed_feature_records": 0,
+          "split_policy": "gold_patient_grouped",
+          "train_count": 702,
+          "x_train_end": 702,
+          "effective_train_weight": 702.0
+        }
+      ],
+      "methods": {
+        "local_only": {
+          "metrics": {
+            "n": 876,
+            "positive": 280,
+            "predicted_positive": 256,
+            "accuracy": 0.8149082096092191,
+            "balanced_accuracy": 0.7757013977141046,
+            "f1": 0.6981230747188194,
+            "auroc": 0.8985760957043908,
+            "auprc": 0.8419813739701683,
+            "logloss": 0.6292353482396059
+          },
+          "per_site": [
+            {
+              "n": 177,
+              "accuracy": 0.7570621468926554,
+              "positive": 55,
+              "predicted_positive": 80,
+              "balanced_accuracy": 0.7788375558867362,
+              "f1": 0.6814814814814815,
+              "auroc": 0.902086438152012,
+              "auprc": 0.8483079311186321,
+              "logloss": 0.6217663840655804,
+              "threshold": 0.20510748861179853
+            },
+            {
+              "n": 178,
+              "accuracy": 0.8370786516853933,
+              "positive": 57,
+              "predicted_positive": 42,
+              "balanced_accuracy": 0.7780919240249384,
+              "f1": 0.7070707070707071,
+              "auroc": 0.891982021168624,
+              "auprc": 0.835622248115668,
+              "logloss": 0.6304917183058496,
+              "threshold": 0.2179069219331016
+            },
+            {
+              "n": 168,
+              "accuracy": 0.7976190476190477,
+              "positive": 57,
+              "predicted_positive": 63,
+              "balanced_accuracy": 0.7871028923660502,
+              "f1": 0.7166666666666667,
+              "auroc": 0.9016911648490595,
+              "auprc": 0.8527497250028145,
+              "logloss": 0.650661705395229,
+              "threshold": 0.21748496313982604
+            },
+            {
+              "n": 176,
+              "accuracy": 0.8522727272727273,
+              "positive": 55,
+              "predicted_positive": 33,
+              "balanced_accuracy": 0.7735537190082644,
+              "f1": 0.7045454545454546,
+              "auroc": 0.9032306536438768,
+              "auprc": 0.839903411229315,
+              "logloss": 0.6275856492779505,
+              "threshold": 0.21041773355376528
+            },
+            {
+              "n": 177,
+              "accuracy": 0.8305084745762712,
+              "positive": 56,
+              "predicted_positive": 38,
+              "balanced_accuracy": 0.7609208972845336,
+              "f1": 0.6808510638297872,
+              "auroc": 0.8938902007083825,
+              "auprc": 0.8333235543844114,
+              "logloss": 0.6156712841534201,
+              "threshold": 0.23521367977360294
+            }
+          ],
+          "history": [],
+          "communication_bytes": 0
+        },
+        "fedavg": {
+          "metrics": {
+            "n": 876,
+            "positive": 280,
+            "predicted_positive": 188,
+            "accuracy": 0.8445574477258917,
+            "balanced_accuracy": 0.7779779039281746,
+            "f1": 0.7090783815726607,
+            "auroc": 0.8985397109392217,
+            "auprc": 0.8428783337581878,
+            "logloss": 0.6292050766973754
+          },
+          "per_site": [
+            {
+              "n": 177,
+              "accuracy": 0.8700564971751412,
+              "positive": 55,
+              "predicted_positive": 40,
+              "balanced_accuracy": 0.8108792846497764,
+              "f1": 0.7578947368421053,
+              "auroc": 0.9010432190760059,
+              "auprc": 0.8467435537140802,
+              "logloss": 0.6172099654896396,
+              "threshold": 0.22
+            },
+            {
+              "n": 178,
+              "accuracy": 0.848314606741573,
+              "positive": 57,
+              "predicted_positive": 38,
+              "balanced_accuracy": 0.781716688415253,
+              "f1": 0.7157894736842105,
+              "auroc": 0.894446860954038,
+              "auprc": 0.8416693575916012,
+              "logloss": 0.6302505992157025,
+              "threshold": 0.22
+            },
+            {
+              "n": 168,
+              "accuracy": 0.8273809523809523,
+              "positive": 57,
+              "predicted_positive": 38,
+              "balanced_accuracy": 0.7669511616880038,
+              "f1": 0.6947368421052632,
+              "auroc": 0.8961593172119487,
+              "auprc": 0.845688806564805,
+              "logloss": 0.6541524509668922,
+              "threshold": 0.22
+            },
+            {
+              "n": 176,
+              "accuracy": 0.8352272727272727,
+              "positive": 55,
+              "predicted_positive": 36,
+              "balanced_accuracy": 0.7611570247933884,
+              "f1": 0.6813186813186813,
+              "auroc": 0.9083395942900075,
+              "auprc": 0.8475723711598292,
+              "logloss": 0.6189216533397567,
+              "threshold": 0.22
+            },
+            {
+              "n": 177,
+              "accuracy": 0.8418079096045198,
+              "positive": 56,
+              "predicted_positive": 36,
+              "balanced_accuracy": 0.7691853600944509,
+              "f1": 0.6956521739130435,
+              "auroc": 0.8927095631641087,
+              "auprc": 0.8327175797606234,
+              "logloss": 0.6254907144748858,
+              "threshold": 0.22
+            }
+          ],
+          "history": [
+            {
+              "round": 1,
+              "sites": 5
+            },
+            {
+              "round": 2,
+              "sites": 5
+            },
+            {
+              "round": 3,
+              "sites": 5
+            },
+            {
+              "round": 4,
+              "sites": 5
+            },
+            {
+              "round": 5,
+              "sites": 5
+            },
+            {
+              "round": 6,
+              "sites": 5
+            },
+            {
+              "round": 7,
+              "sites": 5
+            },
+            {
+              "round": 8,
+              "sites": 5
+            },
+            {
+              "round": 9,
+              "sites": 5
+            },
+            {
+              "round": 10,
+              "sites": 5
+            },
+            {
+              "round": 11,
+              "sites": 5
+            },
+            {
+              "round": 12,
+              "sites": 5
+            },
+            {
+              "round": 13,
+              "sites": 5
+            },
+            {
+              "round": 14,
+              "sites": 5
+            },
+            {
+              "round": 15,
+              "sites": 5
+            },
+            {
+              "round": 16,
+              "sites": 5
+            },
+            {
+              "round": 17,
+              "sites": 5
+            },
+            {
+              "round": 18,
+              "sites": 5
+            },
+            {
+              "round": 19,
+              "sites": 5
+            },
+            {
+              "round": 20,
+              "sites": 5
+            }
+          ],
+          "communication_bytes": 218320,
+          "model_update_upload_bytes": 103200,
+          "model_broadcast_bytes": 103200,
+          "threshold_aggregation_bytes": 11920,
+          "linkage_sketch_upload_bytes": 0,
+          "linkage_weight_download_bytes": 0,
+          "communication_scope": "numeric/digest payload estimate; excludes identifiers, headers, transport and cryptographic overhead"
+        },
+        "fedprox": {
+          "metrics": {
+            "n": 876,
+            "positive": 280,
+            "predicted_positive": 187,
+            "accuracy": 0.8456938113622554,
+            "balanced_accuracy": 0.7788043502091663,
+            "f1": 0.7105924230867022,
+            "auroc": 0.8985397109392217,
+            "auprc": 0.8428783337581878,
+            "logloss": 0.6292750691497818
+          },
+          "per_site": [
+            {
+              "n": 177,
+              "accuracy": 0.8700564971751412,
+              "positive": 55,
+              "predicted_positive": 40,
+              "balanced_accuracy": 0.8108792846497764,
+              "f1": 0.7578947368421053,
+              "auroc": 0.9010432190760059,
+              "auprc": 0.8467435537140802,
+              "logloss": 0.6172798020432043,
+              "threshold": 0.22
+            },
+            {
+              "n": 178,
+              "accuracy": 0.848314606741573,
+              "positive": 57,
+              "predicted_positive": 38,
+              "balanced_accuracy": 0.781716688415253,
+              "f1": 0.7157894736842105,
+              "auroc": 0.894446860954038,
+              "auprc": 0.8416693575916012,
+              "logloss": 0.6303195323805256,
+              "threshold": 0.22
+            },
+            {
+              "n": 168,
+              "accuracy": 0.8273809523809523,
+              "positive": 57,
+              "predicted_positive": 38,
+              "balanced_accuracy": 0.7669511616880038,
+              "f1": 0.6947368421052632,
+              "auroc": 0.8961593172119487,
+              "auprc": 0.845688806564805,
+              "logloss": 0.6542249428768203,
+              "threshold": 0.22
+            },
+            {
+              "n": 176,
+              "accuracy": 0.8409090909090909,
+              "positive": 55,
+              "predicted_positive": 35,
+              "balanced_accuracy": 0.7652892561983471,
+              "f1": 0.6888888888888889,
+              "auroc": 0.9083395942900075,
+              "auprc": 0.8475723711598292,
+              "logloss": 0.6189924806319865,
+              "threshold": 0.22
+            },
+            {
+              "n": 177,
+              "accuracy": 0.8418079096045198,
+              "positive": 56,
+              "predicted_positive": 36,
+              "balanced_accuracy": 0.7691853600944509,
+              "f1": 0.6956521739130435,
+              "auroc": 0.8927095631641087,
+              "auprc": 0.8327175797606234,
+              "logloss": 0.6255585878163724,
+              "threshold": 0.22
+            }
+          ],
+          "history": [
+            {
+              "round": 1,
+              "sites": 5
+            },
+            {
+              "round": 2,
+              "sites": 5
+            },
+            {
+              "round": 3,
+              "sites": 5
+            },
+            {
+              "round": 4,
+              "sites": 5
+            },
+            {
+              "round": 5,
+              "sites": 5
+            },
+            {
+              "round": 6,
+              "sites": 5
+            },
+            {
+              "round": 7,
+              "sites": 5
+            },
+            {
+              "round": 8,
+              "sites": 5
+            },
+            {
+              "round": 9,
+              "sites": 5
+            },
+            {
+              "round": 10,
+              "sites": 5
+            },
+            {
+              "round": 11,
+              "sites": 5
+            },
+            {
+              "round": 12,
+              "sites": 5
+            },
+            {
+              "round": 13,
+              "sites": 5
+            },
+            {
+              "round": 14,
+              "sites": 5
+            },
+            {
+              "round": 15,
+              "sites": 5
+            },
+            {
+              "round": 16,
+              "sites": 5
+            },
+            {
+              "round": 17,
+              "sites": 5
+            },
+            {
+              "round": 18,
+              "sites": 5
+            },
+            {
+              "round": 19,
+              "sites": 5
+            },
+            {
+              "round": 20,
+              "sites": 5
+            }
+          ],
+          "communication_bytes": 218320,
+          "model_update_upload_bytes": 103200,
+          "model_broadcast_bytes": 103200,
+          "threshold_aggregation_bytes": 11920,
+          "linkage_sketch_upload_bytes": 0,
+          "linkage_weight_download_bytes": 0,
+          "communication_scope": "numeric/digest payload estimate; excludes identifiers, headers, transport and cryptographic overhead"
+        },
+        "centralized_upper_bound": {
+          "metrics": {
+            "n": 876,
+            "positive": 280,
+            "predicted_positive": 207,
+            "accuracy": 0.838853545521323,
+            "balanced_accuracy": 0.7805736298741632,
+            "f1": 0.7102784488392391,
+            "auroc": 0.8985397109392217,
+            "auprc": 0.8428783337581878,
+            "logloss": 0.6292018435873324
+          },
+          "per_site": [
+            {
+              "n": 177,
+              "accuracy": 0.8531073446327684,
+              "positive": 55,
+              "predicted_positive": 43,
+              "balanced_accuracy": 0.7985842026825634,
+              "f1": 0.7346938775510204,
+              "auroc": 0.9010432190760059,
+              "auprc": 0.8467435537140802,
+              "logloss": 0.6172067278975342,
+              "threshold": 0.21888227376765637
+            },
+            {
+              "n": 178,
+              "accuracy": 0.8426966292134831,
+              "positive": 57,
+              "predicted_positive": 43,
+              "balanced_accuracy": 0.7868638538494998,
+              "f1": 0.72,
+              "auroc": 0.894446860954038,
+              "auprc": 0.8416693575916012,
+              "logloss": 0.6302476982465561,
+              "threshold": 0.21888227376765637
+            },
+            {
+              "n": 168,
+              "accuracy": 0.8214285714285714,
+              "positive": 57,
+              "predicted_positive": 39,
+              "balanced_accuracy": 0.7624466571834994,
+              "f1": 0.6875,
+              "auroc": 0.8961593172119487,
+              "auprc": 0.845688806564805,
+              "logloss": 0.6541486621029601,
+              "threshold": 0.21888227376765637
+            },
+            {
+              "n": 176,
+              "accuracy": 0.8352272727272727,
+              "positive": 55,
+              "predicted_positive": 44,
+              "balanced_accuracy": 0.78099173553719,
+              "f1": 0.7070707070707071,
+              "auroc": 0.9083395942900075,
+              "auprc": 0.8475723711598292,
+              "logloss": 0.6189186862335887,
+              "threshold": 0.21888227376765637
+            },
+            {
+              "n": 177,
+              "accuracy": 0.8418079096045198,
+              "positive": 56,
+              "predicted_positive": 38,
+              "balanced_accuracy": 0.7739817001180638,
+              "f1": 0.7021276595744681,
+              "auroc": 0.8927095631641087,
+              "auprc": 0.8327175797606234,
+              "logloss": 0.6254874434560231,
+              "threshold": 0.21888227376765637
+            }
+          ],
+          "history": [],
+          "communication_bytes": 49549280
+        }
+      }
+    },
+    "normalized_events": {
+      "sites": [
+        {
+          "path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\sites\\site_1.jsonl",
+          "patients": 888,
+          "records": 63051,
+          "train": 711,
+          "test": 177,
+          "positive": 197,
+          "excluded_event_types": [
+            "condition"
+          ],
+          "excluded_records": 9190,
+          "missing_patient_records": 0,
+          "missing_patient_positive_records": 0,
+          "collapsed_feature_records": 2506,
+          "split_policy": "gold_patient_grouped",
+          "train_count": 711,
+          "x_train_end": 711,
+          "effective_train_weight": 711.0
+        },
+        {
+          "path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\sites\\site_2.jsonl",
+          "patients": 899,
+          "records": 62827,
+          "train": 721,
+          "test": 178,
+          "positive": 205,
+          "excluded_event_types": [
+            "condition"
+          ],
+          "excluded_records": 9115,
+          "missing_patient_records": 0,
+          "missing_patient_positive_records": 0,
+          "collapsed_feature_records": 2623,
+          "split_policy": "gold_patient_grouped",
+          "train_count": 721,
+          "x_train_end": 721,
+          "effective_train_weight": 721.0
+        },
+        {
+          "path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\sites\\site_3.jsonl",
+          "patients": 871,
+          "records": 60718,
+          "train": 703,
+          "test": 168,
+          "positive": 205,
+          "excluded_event_types": [
+            "condition"
+          ],
+          "excluded_records": 8836,
+          "missing_patient_records": 0,
+          "missing_patient_positive_records": 0,
+          "collapsed_feature_records": 2443,
+          "split_policy": "gold_patient_grouped",
+          "train_count": 703,
+          "x_train_end": 703,
+          "effective_train_weight": 703.0
+        },
+        {
+          "path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\sites\\site_4.jsonl",
+          "patients": 888,
+          "records": 61847,
+          "train": 712,
+          "test": 176,
+          "positive": 194,
+          "excluded_event_types": [
+            "condition"
+          ],
+          "excluded_records": 8993,
+          "missing_patient_records": 0,
+          "missing_patient_positive_records": 0,
+          "collapsed_feature_records": 2510,
+          "split_policy": "gold_patient_grouped",
+          "train_count": 712,
+          "x_train_end": 712,
+          "effective_train_weight": 712.0
+        },
+        {
+          "path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\sites\\site_5.jsonl",
+          "patients": 879,
+          "records": 61240,
+          "train": 702,
+          "test": 177,
+          "positive": 211,
+          "excluded_event_types": [
+            "condition"
+          ],
+          "excluded_records": 8966,
+          "missing_patient_records": 0,
+          "missing_patient_positive_records": 0,
+          "collapsed_feature_records": 2455,
+          "split_policy": "gold_patient_grouped",
+          "train_count": 702,
+          "x_train_end": 702,
+          "effective_train_weight": 702.0
+        }
+      ],
+      "methods": {
+        "local_only": {
+          "metrics": {
+            "n": 876,
+            "positive": 280,
+            "predicted_positive": 217,
+            "accuracy": 0.833929086688085,
+            "balanced_accuracy": 0.7788221432848461,
+            "f1": 0.7098474360953139,
+            "auroc": 0.8977116924899283,
+            "auprc": 0.8405181849596941,
+            "logloss": 0.6291226435573481
+          },
+          "per_site": [
+            {
+              "n": 177,
+              "accuracy": 0.8700564971751412,
+              "positive": 55,
+              "predicted_positive": 38,
+              "balanced_accuracy": 0.805886736214605,
+              "f1": 0.7526881720430108,
+              "auroc": 0.9081967213114754,
+              "auprc": 0.8565719843736199,
+              "logloss": 0.6210836095224431,
+              "threshold": 0.21225292887527147
+            },
+            {
+              "n": 178,
+              "accuracy": 0.8258426966292135,
+              "positive": 57,
+              "predicted_positive": 42,
+              "balanced_accuracy": 0.7651877627954182,
+              "f1": 0.6868686868686869,
+              "auroc": 0.8880672756270842,
+              "auprc": 0.8255774631363882,
+              "logloss": 0.630778319010196,
+              "threshold": 0.21741693935334117
+            },
+            {
+              "n": 168,
+              "accuracy": 0.7797619047619048,
+              "positive": 57,
+              "predicted_positive": 60,
+              "balanced_accuracy": 0.7607871028923661,
+              "f1": 0.6837606837606838,
+              "auroc": 0.8934724197882092,
+              "auprc": 0.8420427697162409,
+              "logloss": 0.6509561929210266,
+              "threshold": 0.21865000311322588
+            },
+            {
+              "n": 176,
+              "accuracy": 0.8352272727272727,
+              "positive": 55,
+              "predicted_positive": 40,
+              "balanced_accuracy": 0.7710743801652893,
+              "f1": 0.6947368421052632,
+              "auroc": 0.8993238166791886,
+              "auprc": 0.8382885447162112,
+              "logloss": 0.6275517679513338,
+              "threshold": 0.20864436012803264
+            },
+            {
+              "n": 177,
+              "accuracy": 0.8587570621468926,
+              "positive": 56,
+              "predicted_positive": 37,
+              "balanced_accuracy": 0.7911747343565525,
+              "f1": 0.7311827956989247,
+              "auroc": 0.8994982290436836,
+              "auprc": 0.8401101628560106,
+              "logloss": 0.6152433283817411,
+              "threshold": 0.23624192459715412
+            }
+          ],
+          "history": [],
+          "communication_bytes": 0
+        },
+        "fedavg": {
+          "metrics": {
+            "n": 876,
+            "positive": 280,
+            "predicted_positive": 186,
+            "accuracy": 0.8467091096233166,
+            "balanced_accuracy": 0.7797572489850315,
+            "f1": 0.7123770304278197,
+            "auroc": 0.897409751115853,
+            "auprc": 0.8401318677656027,
+            "logloss": 0.6290254786536281
+          },
+          "per_site": [
+            {
+              "n": 177,
+              "accuracy": 0.864406779661017,
+              "positive": 55,
+              "predicted_positive": 39,
+              "balanced_accuracy": 0.8017883755588673,
+              "f1": 0.7446808510638298,
+              "auroc": 0.9073025335320417,
+              "auprc": 0.8555317535006091,
+              "logloss": 0.6162309269340096,
+              "threshold": 0.22
+            },
+            {
+              "n": 178,
+              "accuracy": 0.848314606741573,
+              "positive": 57,
+              "predicted_positive": 36,
+              "balanced_accuracy": 0.7770769899956502,
+              "f1": 0.7096774193548387,
+              "auroc": 0.8909670871393359,
+              "auprc": 0.8295488594730939,
+              "logloss": 0.6303648447376243,
+              "threshold": 0.22
+            },
+            {
+              "n": 168,
+              "accuracy": 0.8154761904761905,
+              "positive": 57,
+              "predicted_positive": 36,
+              "balanced_accuracy": 0.749407302038881,
+              "f1": 0.6666666666666666,
+              "auroc": 0.8887308360992572,
+              "auprc": 0.8363254547099092,
+              "logloss": 0.6544046240197938,
+              "threshold": 0.22
+            },
+            {
+              "n": 176,
+              "accuracy": 0.8465909090909091,
+              "positive": 55,
+              "predicted_positive": 38,
+              "balanced_accuracy": 0.7793388429752066,
+              "f1": 0.7096774193548387,
+              "auroc": 0.9018782870022539,
+              "auprc": 0.8409720144387236,
+              "logloss": 0.6191208834896481,
+              "threshold": 0.22
+            },
+            {
+              "n": 177,
+              "accuracy": 0.8587570621468926,
+              "positive": 56,
+              "predicted_positive": 37,
+              "balanced_accuracy": 0.7911747343565525,
+              "f1": 0.7311827956989247,
+              "auroc": 0.8981700118063755,
+              "auprc": 0.8382812567056773,
+              "logloss": 0.6250061140870652,
+              "threshold": 0.22
+            }
+          ],
+          "history": [
+            {
+              "round": 1,
+              "sites": 5
+            },
+            {
+              "round": 2,
+              "sites": 5
+            },
+            {
+              "round": 3,
+              "sites": 5
+            },
+            {
+              "round": 4,
+              "sites": 5
+            },
+            {
+              "round": 5,
+              "sites": 5
+            },
+            {
+              "round": 6,
+              "sites": 5
+            },
+            {
+              "round": 7,
+              "sites": 5
+            },
+            {
+              "round": 8,
+              "sites": 5
+            },
+            {
+              "round": 9,
+              "sites": 5
+            },
+            {
+              "round": 10,
+              "sites": 5
+            },
+            {
+              "round": 11,
+              "sites": 5
+            },
+            {
+              "round": 12,
+              "sites": 5
+            },
+            {
+              "round": 13,
+              "sites": 5
+            },
+            {
+              "round": 14,
+              "sites": 5
+            },
+            {
+              "round": 15,
+              "sites": 5
+            },
+            {
+              "round": 16,
+              "sites": 5
+            },
+            {
+              "round": 17,
+              "sites": 5
+            },
+            {
+              "round": 18,
+              "sites": 5
+            },
+            {
+              "round": 19,
+              "sites": 5
+            },
+            {
+              "round": 20,
+              "sites": 5
+            }
+          ],
+          "communication_bytes": 218320,
+          "model_update_upload_bytes": 103200,
+          "model_broadcast_bytes": 103200,
+          "threshold_aggregation_bytes": 11920,
+          "linkage_sketch_upload_bytes": 0,
+          "linkage_weight_download_bytes": 0,
+          "communication_scope": "numeric/digest payload estimate; excludes identifiers, headers, transport and cryptographic overhead"
+        },
+        "fedprox": {
+          "metrics": {
+            "n": 876,
+            "positive": 280,
+            "predicted_positive": 185,
+            "accuracy": 0.8478995858137927,
+            "balanced_accuracy": 0.7806581498859325,
+            "f1": 0.7138263057901385,
+            "auroc": 0.897409751115853,
+            "auprc": 0.8401318677656027,
+            "logloss": 0.6290959780224339
+          },
+          "per_site": [
+            {
+              "n": 177,
+              "accuracy": 0.864406779661017,
+              "positive": 55,
+              "predicted_positive": 39,
+              "balanced_accuracy": 0.8017883755588673,
+              "f1": 0.7446808510638298,
+              "auroc": 0.9073025335320417,
+              "auprc": 0.8555317535006091,
+              "logloss": 0.6163027930759459,
+              "threshold": 0.22
+            },
+            {
+              "n": 178,
+              "accuracy": 0.848314606741573,
+              "positive": 57,
+              "predicted_positive": 36,
+              "balanced_accuracy": 0.7770769899956502,
+              "f1": 0.7096774193548387,
+              "auroc": 0.8909670871393359,
+              "auprc": 0.8295488594730939,
+              "logloss": 0.6304340144823634,
+              "threshold": 0.22
+            },
+            {
+              "n": 168,
+              "accuracy": 0.8214285714285714,
+              "positive": 57,
+              "predicted_positive": 35,
+              "balanced_accuracy": 0.7539118065433855,
+              "f1": 0.6739130434782609,
+              "auroc": 0.8887308360992572,
+              "auprc": 0.8363254547099092,
+              "logloss": 0.6544770605982736,
+              "threshold": 0.22
+            },
+            {
+              "n": 176,
+              "accuracy": 0.8465909090909091,
+              "positive": 55,
+              "predicted_positive": 38,
+              "balanced_accuracy": 0.7793388429752066,
+              "f1": 0.7096774193548387,
+              "auroc": 0.9018782870022539,
+              "auprc": 0.8409720144387236,
+              "logloss": 0.619191016751177,
+              "threshold": 0.22
+            },
+            {
+              "n": 177,
+              "accuracy": 0.8587570621468926,
+              "positive": 56,
+              "predicted_positive": 37,
+              "balanced_accuracy": 0.7911747343565525,
+              "f1": 0.7311827956989247,
+              "auroc": 0.8981700118063755,
+              "auprc": 0.8382812567056773,
+              "logloss": 0.6250750052044098,
+              "threshold": 0.22
+            }
+          ],
+          "history": [
+            {
+              "round": 1,
+              "sites": 5
+            },
+            {
+              "round": 2,
+              "sites": 5
+            },
+            {
+              "round": 3,
+              "sites": 5
+            },
+            {
+              "round": 4,
+              "sites": 5
+            },
+            {
+              "round": 5,
+              "sites": 5
+            },
+            {
+              "round": 6,
+              "sites": 5
+            },
+            {
+              "round": 7,
+              "sites": 5
+            },
+            {
+              "round": 8,
+              "sites": 5
+            },
+            {
+              "round": 9,
+              "sites": 5
+            },
+            {
+              "round": 10,
+              "sites": 5
+            },
+            {
+              "round": 11,
+              "sites": 5
+            },
+            {
+              "round": 12,
+              "sites": 5
+            },
+            {
+              "round": 13,
+              "sites": 5
+            },
+            {
+              "round": 14,
+              "sites": 5
+            },
+            {
+              "round": 15,
+              "sites": 5
+            },
+            {
+              "round": 16,
+              "sites": 5
+            },
+            {
+              "round": 17,
+              "sites": 5
+            },
+            {
+              "round": 18,
+              "sites": 5
+            },
+            {
+              "round": 19,
+              "sites": 5
+            },
+            {
+              "round": 20,
+              "sites": 5
+            }
+          ],
+          "communication_bytes": 218320,
+          "model_update_upload_bytes": 103200,
+          "model_broadcast_bytes": 103200,
+          "threshold_aggregation_bytes": 11920,
+          "linkage_sketch_upload_bytes": 0,
+          "linkage_weight_download_bytes": 0,
+          "communication_scope": "numeric/digest payload estimate; excludes identifiers, headers, transport and cryptographic overhead"
+        },
+        "centralized_upper_bound": {
+          "metrics": {
+            "n": 876,
+            "positive": 280,
+            "predicted_positive": 190,
+            "accuracy": 0.8467568741802222,
+            "balanced_accuracy": 0.7816131283528727,
+            "f1": 0.7148936170212766,
+            "auroc": 0.897409751115853,
+            "auprc": 0.8401318677656027,
+            "logloss": 0.6290232687812218
+          },
+          "per_site": [
+            {
+              "n": 177,
+              "accuracy": 0.864406779661017,
+              "positive": 55,
+              "predicted_positive": 39,
+              "balanced_accuracy": 0.8017883755588673,
+              "f1": 0.7446808510638298,
+              "auroc": 0.9073025335320417,
+              "auprc": 0.8555317535006091,
+              "logloss": 0.6162288255059963,
+              "threshold": 0.21964287057670587
+            },
+            {
+              "n": 178,
+              "accuracy": 0.8539325842696629,
+              "positive": 57,
+              "predicted_positive": 37,
+              "balanced_accuracy": 0.7858489198202117,
+              "f1": 0.723404255319149,
+              "auroc": 0.8909670871393359,
+              "auprc": 0.8295488594730939,
+              "logloss": 0.6303626287374873,
+              "threshold": 0.21964287057670587
+            },
+            {
+              "n": 168,
+              "accuracy": 0.8214285714285714,
+              "positive": 57,
+              "predicted_positive": 37,
+              "balanced_accuracy": 0.7581792318634424,
+              "f1": 0.6808510638297872,
+              "auroc": 0.8887308360992572,
+              "auprc": 0.8363254547099092,
+              "logloss": 0.6544021585135137,
+              "threshold": 0.21964287057670587
+            },
+            {
+              "n": 176,
+              "accuracy": 0.8409090909090909,
+              "positive": 55,
+              "predicted_positive": 39,
+              "balanced_accuracy": 0.775206611570248,
+              "f1": 0.7021276595744681,
+              "auroc": 0.9018782870022539,
+              "auprc": 0.8409720144387236,
+              "logloss": 0.6191187763281875,
+              "threshold": 0.21964287057670587
+            },
+            {
+              "n": 177,
+              "accuracy": 0.8531073446327684,
+              "positive": 56,
+              "predicted_positive": 38,
+              "balanced_accuracy": 0.7870425029515938,
+              "f1": 0.723404255319149,
+              "auroc": 0.8981700118063755,
+              "auprc": 0.8382812567056773,
+              "logloss": 0.6250039548209244,
+              "threshold": 0.21964287057670587
+            }
+          ],
+          "history": [],
+          "communication_bytes": 49549280
+        }
+      }
+    },
+    "alignment_aware": {
+      "sites": [
+        {
+          "path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\sites\\site_1.jsonl",
+          "patients": 888,
+          "records": 63051,
+          "train": 711,
+          "test": 177,
+          "positive": 197,
+          "excluded_event_types": [
+            "condition"
+          ],
+          "excluded_records": 9190,
+          "missing_patient_records": 0,
+          "missing_patient_positive_records": 0,
+          "collapsed_feature_records": 2506,
+          "split_policy": "gold_patient_grouped",
+          "train_count": 711,
+          "x_train_end": 711,
+          "effective_train_weight": 194.08333333333334
+        },
+        {
+          "path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\sites\\site_2.jsonl",
+          "patients": 899,
+          "records": 62827,
+          "train": 721,
+          "test": 178,
+          "positive": 205,
+          "excluded_event_types": [
+            "condition"
+          ],
+          "excluded_records": 9115,
+          "missing_patient_records": 0,
+          "missing_patient_positive_records": 0,
+          "collapsed_feature_records": 2623,
+          "split_policy": "gold_patient_grouped",
+          "train_count": 721,
+          "x_train_end": 721,
+          "effective_train_weight": 197.58333333333334
+        },
+        {
+          "path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\sites\\site_3.jsonl",
+          "patients": 871,
+          "records": 60718,
+          "train": 703,
+          "test": 168,
+          "positive": 205,
+          "excluded_event_types": [
+            "condition"
+          ],
+          "excluded_records": 8836,
+          "missing_patient_records": 0,
+          "missing_patient_positive_records": 0,
+          "collapsed_feature_records": 2443,
+          "split_policy": "gold_patient_grouped",
+          "train_count": 703,
+          "x_train_end": 703,
+          "effective_train_weight": 190.75
+        },
+        {
+          "path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\sites\\site_4.jsonl",
+          "patients": 888,
+          "records": 61847,
+          "train": 712,
+          "test": 176,
+          "positive": 194,
+          "excluded_event_types": [
+            "condition"
+          ],
+          "excluded_records": 8993,
+          "missing_patient_records": 0,
+          "missing_patient_positive_records": 0,
+          "collapsed_feature_records": 2510,
+          "split_policy": "gold_patient_grouped",
+          "train_count": 712,
+          "x_train_end": 712,
+          "effective_train_weight": 194.83333333333334
+        },
+        {
+          "path": "D:\\work\\2021工作\\博士\\毕业论文\\小论文\\联邦数据融合\\manuscripts\\applsci_format\\cohort_b\\results\\missing_00\\seed_11\\sites\\site_5.jsonl",
+          "patients": 879,
+          "records": 61240,
+          "train": 702,
+          "test": 177,
+          "positive": 211,
+          "excluded_event_types": [
+            "condition"
+          ],
+          "excluded_records": 8966,
+          "missing_patient_records": 0,
+          "missing_patient_positive_records": 0,
+          "collapsed_feature_records": 2455,
+          "split_policy": "gold_patient_grouped",
+          "train_count": 702,
+          "x_train_end": 702,
+          "effective_train_weight": 194.75
+        }
+      ],
+      "methods": {
+        "local_only": {
+          "metrics": {
+            "n": 876,
+            "positive": 280,
+            "predicted_positive": 217,
+            "accuracy": 0.833929086688085,
+            "balanced_accuracy": 0.7788221432848461,
+            "f1": 0.7098474360953139,
+            "auroc": 0.8977116924899283,
+            "auprc": 0.8405181849596941,
+            "logloss": 0.6291226435573481
+          },
+          "per_site": [
+            {
+              "n": 177,
+              "accuracy": 0.8700564971751412,
+              "positive": 55,
+              "predicted_positive": 38,
+              "balanced_accuracy": 0.805886736214605,
+              "f1": 0.7526881720430108,
+              "auroc": 0.9081967213114754,
+              "auprc": 0.8565719843736199,
+              "logloss": 0.6210836095224431,
+              "threshold": 0.21225292887527147
+            },
+            {
+              "n": 178,
+              "accuracy": 0.8258426966292135,
+              "positive": 57,
+              "predicted_positive": 42,
+              "balanced_accuracy": 0.7651877627954182,
+              "f1": 0.6868686868686869,
+              "auroc": 0.8880672756270842,
+              "auprc": 0.8255774631363882,
+              "logloss": 0.630778319010196,
+              "threshold": 0.21741693935334117
+            },
+            {
+              "n": 168,
+              "accuracy": 0.7797619047619048,
+              "positive": 57,
+              "predicted_positive": 60,
+              "balanced_accuracy": 0.7607871028923661,
+              "f1": 0.6837606837606838,
+              "auroc": 0.8934724197882092,
+              "auprc": 0.8420427697162409,
+              "logloss": 0.6509561929210266,
+              "threshold": 0.21865000311322588
+            },
+            {
+              "n": 176,
+              "accuracy": 0.8352272727272727,
+              "positive": 55,
+              "predicted_positive": 40,
+              "balanced_accuracy": 0.7710743801652893,
+              "f1": 0.6947368421052632,
+              "auroc": 0.8993238166791886,
+              "auprc": 0.8382885447162112,
+              "logloss": 0.6275517679513338,
+              "threshold": 0.20864436012803264
+            },
+            {
+              "n": 177,
+              "accuracy": 0.8587570621468926,
+              "positive": 56,
+              "predicted_positive": 37,
+              "balanced_accuracy": 0.7911747343565525,
+              "f1": 0.7311827956989247,
+              "auroc": 0.8994982290436836,
+              "auprc": 0.8401101628560106,
+              "logloss": 0.6152433283817411,
+              "threshold": 0.23624192459715412
+            }
+          ],
+          "history": [],
+          "communication_bytes": 0
+        },
+        "fedavg": {
+          "metrics": {
+            "n": 876,
+            "positive": 280,
+            "predicted_positive": 191,
+            "accuracy": 0.8410593199728602,
+            "balanced_accuracy": 0.7756317917299171,
+            "f1": 0.7047107129525941,
+            "auroc": 0.8954970443620534,
+            "auprc": 0.8377765019147863,
+            "logloss": 0.6274016433099951
+          },
+          "per_site": [
+            {
+              "n": 177,
+              "accuracy": 0.8587570621468926,
+              "positive": 55,
+              "predicted_positive": 40,
+              "balanced_accuracy": 0.7976900149031296,
+              "f1": 0.7368421052631579,
+              "auroc": 0.9055141579731744,
+              "auprc": 0.8532478151462142,
+              "logloss": 0.6144855614422665,
+              "threshold": 0.22
+            },
+            {
+              "n": 178,
+              "accuracy": 0.8426966292134831,
+              "positive": 57,
+              "predicted_positive": 37,
+              "balanced_accuracy": 0.7729447585906917,
+              "f1": 0.7021276595744681,
+              "auroc": 0.8892272002319849,
+              "auprc": 0.8278593160274588,
+              "logloss": 0.6287841336925833,
+              "threshold": 0.22
+            },
+            {
+              "n": 168,
+              "accuracy": 0.8154761904761905,
+              "positive": 57,
+              "predicted_positive": 36,
+              "balanced_accuracy": 0.749407302038881,
+              "f1": 0.6666666666666666,
+              "auroc": 0.8874664137822033,
+              "auprc": 0.8344504379202019,
+              "logloss": 0.6528788192790727,
+              "threshold": 0.22
+            },
+            {
+              "n": 176,
+              "accuracy": 0.8409090909090909,
+              "positive": 55,
+              "predicted_positive": 39,
+              "balanced_accuracy": 0.775206611570248,
+              "f1": 0.7021276595744681,
+              "auroc": 0.8991735537190083,
+              "auprc": 0.8379310797515731,
+              "logloss": 0.6174482913524211,
+              "threshold": 0.22
+            },
+            {
+              "n": 177,
+              "accuracy": 0.847457627118644,
+              "positive": 56,
+              "predicted_positive": 39,
+              "balanced_accuracy": 0.7829102715466352,
+              "f1": 0.7157894736842105,
+              "auroc": 0.8961038961038961,
+              "auprc": 0.8353938607284829,
+              "logloss": 0.6234114107836318,
+              "threshold": 0.22
+            }
+          ],
+          "history": [
+            {
+              "round": 1,
+              "sites": 5
+            },
+            {
+              "round": 2,
+              "sites": 5
+            },
+            {
+              "round": 3,
+              "sites": 5
+            },
+            {
+              "round": 4,
+              "sites": 5
+            },
+            {
+              "round": 5,
+              "sites": 5
+            },
+            {
+              "round": 6,
+              "sites": 5
+            },
+            {
+              "round": 7,
+              "sites": 5
+            },
+            {
+              "round": 8,
+              "sites": 5
+            },
+            {
+              "round": 9,
+              "sites": 5
+            },
+            {
+              "round": 10,
+              "sites": 5
+            },
+            {
+              "round": 11,
+              "sites": 5
+            },
+            {
+              "round": 12,
+              "sites": 5
+            },
+            {
+              "round": 13,
+              "sites": 5
+            },
+            {
+              "round": 14,
+              "sites": 5
+            },
+            {
+              "round": 15,
+              "sites": 5
+            },
+            {
+              "round": 16,
+              "sites": 5
+            },
+            {
+              "round": 17,
+              "sites": 5
+            },
+            {
+              "round": 18,
+              "sites": 5
+            },
+            {
+              "round": 19,
+              "sites": 5
+            },
+            {
+              "round": 20,
+              "sites": 5
+            }
+          ],
+          "communication_bytes": 12056024,
+          "model_update_upload_bytes": 103200,
+          "model_broadcast_bytes": 103200,
+          "threshold_aggregation_bytes": 11920,
+          "linkage_sketch_upload_bytes": 11802304,
+          "linkage_weight_download_bytes": 35400,
+          "communication_scope": "numeric/digest payload estimate; excludes identifiers, headers, transport and cryptographic overhead"
+        },
+        "fedprox": {
+          "metrics": {
+            "n": 876,
+            "positive": 280,
+            "predicted_positive": 187,
+            "accuracy": 0.8455791661204917,
+            "balanced_accuracy": 0.7789308027040398,
+            "f1": 0.7108213223518646,
+            "auroc": 0.8954680462469309,
+            "auprc": 0.8377431027108004,
+            "logloss": 0.6274785190163035
+          },
+          "per_site": [
+            {
+              "n": 177,
+              "accuracy": 0.864406779661017,
+              "positive": 55,
+              "predicted_positive": 39,
+              "balanced_accuracy": 0.8017883755588673,
+              "f1": 0.7446808510638298,
+              "auroc": 0.9055141579731744,
+              "auprc": 0.8532478151462142,
+              "logloss": 0.614563716673452,
+              "threshold": 0.22
+            },
+            {
+              "n": 178,
+              "accuracy": 0.848314606741573,
+              "positive": 57,
+              "predicted_positive": 36,
+              "balanced_accuracy": 0.7770769899956502,
+              "f1": 0.7096774193548387,
+              "auroc": 0.8890822096563723,
+              "auprc": 0.8276923200075306,
+              "logloss": 0.6288596174937188,
+              "threshold": 0.22
+            },
+            {
+              "n": 168,
+              "accuracy": 0.8154761904761905,
+              "positive": 57,
+              "predicted_positive": 36,
+              "balanced_accuracy": 0.749407302038881,
+              "f1": 0.6666666666666666,
+              "auroc": 0.8874664137822033,
+              "auprc": 0.8344504379202019,
+              "logloss": 0.6529580845892224,
+              "threshold": 0.22
+            },
+            {
+              "n": 176,
+              "accuracy": 0.8465909090909091,
+              "positive": 55,
+              "predicted_positive": 38,
+              "balanced_accuracy": 0.7793388429752066,
+              "f1": 0.7096774193548387,
+              "auroc": 0.8991735537190083,
+              "auprc": 0.8379310797515731,
+              "logloss": 0.6175246384619121,
+              "threshold": 0.22
+            },
+            {
+              "n": 177,
+              "accuracy": 0.8531073446327684,
+              "positive": 56,
+              "predicted_positive": 38,
+              "balanced_accuracy": 0.7870425029515938,
+              "f1": 0.723404255319149,
+              "auroc": 0.8961038961038961,
+              "auprc": 0.8353938607284829,
+              "logloss": 0.6234865378632122,
+              "threshold": 0.22
+            }
+          ],
+          "history": [
+            {
+              "round": 1,
+              "sites": 5
+            },
+            {
+              "round": 2,
+              "sites": 5
+            },
+            {
+              "round": 3,
+              "sites": 5
+            },
+            {
+              "round": 4,
+              "sites": 5
+            },
+            {
+              "round": 5,
+              "sites": 5
+            },
+            {
+              "round": 6,
+              "sites": 5
+            },
+            {
+              "round": 7,
+              "sites": 5
+            },
+            {
+              "round": 8,
+              "sites": 5
+            },
+            {
+              "round": 9,
+              "sites": 5
+            },
+            {
+              "round": 10,
+              "sites": 5
+            },
+            {
+              "round": 11,
+              "sites": 5
+            },
+            {
+              "round": 12,
+              "sites": 5
+            },
+            {
+              "round": 13,
+              "sites": 5
+            },
+            {
+              "round": 14,
+              "sites": 5
+            },
+            {
+              "round": 15,
+              "sites": 5
+            },
+            {
+              "round": 16,
+              "sites": 5
+            },
+            {
+              "round": 17,
+              "sites": 5
+            },
+            {
+              "round": 18,
+              "sites": 5
+            },
+            {
+              "round": 19,
+              "sites": 5
+            },
+            {
+              "round": 20,
+              "sites": 5
+            }
+          ],
+          "communication_bytes": 12056024,
+          "model_update_upload_bytes": 103200,
+          "model_broadcast_bytes": 103200,
+          "threshold_aggregation_bytes": 11920,
+          "linkage_sketch_upload_bytes": 11802304,
+          "linkage_weight_download_bytes": 35400,
+          "communication_scope": "numeric/digest payload estimate; excludes identifiers, headers, transport and cryptographic overhead"
+        },
+        "centralized_upper_bound": {
+          "metrics": {
+            "n": 876,
+            "positive": 280,
+            "predicted_positive": 190,
+            "accuracy": 0.8467568741802222,
+            "balanced_accuracy": 0.7816131283528727,
+            "f1": 0.7148936170212766,
+            "auroc": 0.897409751115853,
+            "auprc": 0.8401318677656027,
+            "logloss": 0.6290232687812218
+          },
+          "per_site": [
+            {
+              "n": 177,
+              "accuracy": 0.864406779661017,
+              "positive": 55,
+              "predicted_positive": 39,
+              "balanced_accuracy": 0.8017883755588673,
+              "f1": 0.7446808510638298,
+              "auroc": 0.9073025335320417,
+              "auprc": 0.8555317535006091,
+              "logloss": 0.6162288255059963,
+              "threshold": 0.21964287057670587
+            },
+            {
+              "n": 178,
+              "accuracy": 0.8539325842696629,
+              "positive": 57,
+              "predicted_positive": 37,
+              "balanced_accuracy": 0.7858489198202117,
+              "f1": 0.723404255319149,
+              "auroc": 0.8909670871393359,
+              "auprc": 0.8295488594730939,
+              "logloss": 0.6303626287374873,
+              "threshold": 0.21964287057670587
+            },
+            {
+              "n": 168,
+              "accuracy": 0.8214285714285714,
+              "positive": 57,
+              "predicted_positive": 37,
+              "balanced_accuracy": 0.7581792318634424,
+              "f1": 0.6808510638297872,
+              "auroc": 0.8887308360992572,
+              "auprc": 0.8363254547099092,
+              "logloss": 0.6544021585135137,
+              "threshold": 0.21964287057670587
+            },
+            {
+              "n": 176,
+              "accuracy": 0.8409090909090909,
+              "positive": 55,
+              "predicted_positive": 39,
+              "balanced_accuracy": 0.775206611570248,
+              "f1": 0.7021276595744681,
+              "auroc": 0.9018782870022539,
+              "auprc": 0.8409720144387236,
+              "logloss": 0.6191187763281875,
+              "threshold": 0.21964287057670587
+            },
+            {
+              "n": 177,
+              "accuracy": 0.8531073446327684,
+              "positive": 56,
+              "predicted_positive": 38,
+              "balanced_accuracy": 0.7870425029515938,
+              "f1": 0.723404255319149,
+              "auroc": 0.8981700118063755,
+              "auprc": 0.8382812567056773,
+              "logloss": 0.6250039548209244,
+              "threshold": 0.21964287057670587
+            }
+          ],
+          "history": [],
+          "communication_bytes": 49549280
+        }
+      }
+    }
+  },
+  "entity_linkage": {
+    "method": "noncondition_mutual_best_inverse_cluster_weight",
+    "truth_used_for_matching": false,
+    "folds": {
+      "train": {
+        "candidate_pairs": 5038041,
+        "predicted_pairs": 5444,
+        "profiles": 3549,
+        "sketch_digest_bytes": 9457600,
+        "excluded_linkage_event_types": [
+          "condition"
+        ],
+        "threshold": 0.5,
+        "clusters": 972,
+        "rejected_site_conflicts": 117,
+        "effective_patient_weight": 972.0
+      },
+      "test": {
+        "candidate_pairs": 306917,
+        "predicted_pairs": 1318,
+        "profiles": 876,
+        "sketch_digest_bytes": 2344704,
+        "excluded_linkage_event_types": [
+          "condition"
+        ],
+        "threshold": 0.5,
+        "clusters": 252,
+        "rejected_site_conflicts": 38,
+        "effective_patient_weight": 252.0
+      }
+    },
+    "sketch_digest_bytes": 11802304
+  }
+}

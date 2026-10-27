@@ -1,0 +1,187 @@
+{
+  "cohort": "B",
+  "purpose": "Independent-cohort replication reported in Section 4.9 and Table 10.",
+  "generator": {
+    "name": "Synthea",
+    "version": "4.0.1-SNAPSHOT",
+    "runnable_jar_sha256": "37596e412f9095164711d2d29b0a2466934a42c846c67551b1e45b1ec95fa7b6"
+  },
+  "generation": {
+    "command": "java -Xmx8g -jar synthea-4.0.1-SNAPSHOT-with-dependencies.jar -p 1000 -s 20261012 -cs 20261012 -r 20261011 -e 20261011 --exporter.baseDirectory=<work>/synthea_raw --exporter.csv.export=true --exporter.fhir.export=false",
+    "patient_seed": 20261012,
+    "clinician_seed": 20261012,
+    "reference_date": "20261011",
+    "end_date": "20261011",
+    "state": "Massachusetts",
+    "requested_population": 1000,
+    "exported_patients": 1152,
+    "csv_export": true,
+    "fhir_export": false
+  },
+  "selection": {
+    "caps": {
+      "conditions.csv": 10,
+      "observations.csv": 25,
+      "encounters.csv": 10,
+      "medications.csv": 10,
+      "procedures.csv": 10,
+      "allergies.csv": 5,
+      "immunizations.csv": 5
+    },
+    "target_rule": "retain all condition rows whose description contains hypertension (case-insensitive)",
+    "retained_events": 78092,
+    "positive_patients": 269,
+    "input_sha256": {
+      "allergies.csv": "c40aca80835e685d9f813ec8460888037c8d0bfc0192f17c2f24609ab2eb2b72",
+      "conditions.csv": "454db770f38af12ec4d276477b29061e5ae4bba396c354bb33b6ba7d1d1ca7d6",
+      "encounters.csv": "0d86464746b71546a534686b1cef6a5ff94b3e8d3a7cdc5e91894e113097c0cc",
+      "immunizations.csv": "b67ce7d87c1702978f0fbdb2c017f03c41c739f8a0b63c4b00732aaa41b94257",
+      "medications.csv": "87dc29915cc432b9a7eb1e5b9f75c252d2d6822461dcc7cb9ba1eb60b12278d5",
+      "observations.csv": "7d6c23a5c78d4660af21619fccf42d5cf91d2994b55461546934e3c9f697813d",
+      "patients.csv": "d0091e4b8c9074796adc5454acb256620843612c51d05fa529e8e58607603e72",
+      "procedures.csv": "d044ba7ad87fb529ee12603af014e51ce01fcdc868569d5930a39ce003b263fd",
+      "selection_stats.json": "1826689523dc980df1c072fae8021f6ac9dde3afa904e50001812728cb4378c6"
+    }
+  },
+  "analysis": {
+    "command": "python run_alignment_study.py --input-dir cohort_b/input --output-dir cohort_b/results",
+    "code_version": "v1.0.0 experiment code, unchanged",
+    "experiment_seeds": [
+      11,
+      22,
+      33,
+      44,
+      55
+    ],
+    "shared_rate": 0.7,
+    "missingness": {
+      "missing_00": 0.0,
+      "missing_10": 0.1,
+      "missing_30": 0.3
+    }
+  },
+  "environment": {
+    "python": "3.12.7",
+    "numpy": "2.4.4",
+    "scikit_learn": "1.8.0",
+    "platform": "Windows-11-10.0.26300-SP0"
+  },
+  "key_results": {
+    "0%": {
+      "f1_raw_mean_sd": [
+        0.5475931614794177,
+        0.07962128873479705
+      ],
+      "f1_normalized_mean_sd": [
+        0.6250427119420982,
+        0.05837283517727853
+      ],
+      "f1_weighted_mean_sd": [
+        0.6172359648695822,
+        0.059813642988765583
+      ],
+      "paired_weighted_minus_normalized": {
+        "f1": {
+          "mean": -0.007806747072515896,
+          "bootstrap_95_ci": [
+            -0.021568034741964136,
+            0.0012946371737212697
+          ]
+        },
+        "auroc": {
+          "mean": -0.0021957820959334962,
+          "bootstrap_95_ci": [
+            -0.0036393726378815393,
+            -0.0007351112381452473
+          ]
+        },
+        "auprc": {
+          "mean": -0.0028968926827093178,
+          "bootstrap_95_ci": [
+            -0.0055556916460161474,
+            -0.000923905363658184
+          ]
+        }
+      }
+    },
+    "10%": {
+      "f1_raw_mean_sd": [
+        0.5519584945635898,
+        0.06863030902348327
+      ],
+      "f1_normalized_mean_sd": [
+        0.6170409112981831,
+        0.06187777032813013
+      ],
+      "f1_weighted_mean_sd": [
+        0.616474010231076,
+        0.04786055425427161
+      ],
+      "paired_weighted_minus_normalized": {
+        "f1": {
+          "mean": -0.0005669010671069952,
+          "bootstrap_95_ci": [
+            -0.015557073064031535,
+            0.015229027957796681
+          ]
+        },
+        "auroc": {
+          "mean": -0.00262911451586052,
+          "bootstrap_95_ci": [
+            -0.004054617980586461,
+            -0.001027162998180664
+          ]
+        },
+        "auprc": {
+          "mean": -0.0038651450683725,
+          "bootstrap_95_ci": [
+            -0.005971961501143719,
+            -0.0018048784685460672
+          ]
+        }
+      }
+    },
+    "30%": {
+      "f1_raw_mean_sd": [
+        0.5336283273147439,
+        0.06695755387771926
+      ],
+      "f1_normalized_mean_sd": [
+        0.6146279197487943,
+        0.06064299939488838
+      ],
+      "f1_weighted_mean_sd": [
+        0.6084408287249238,
+        0.044240851844617055
+      ],
+      "paired_weighted_minus_normalized": {
+        "f1": {
+          "mean": -0.006187091023870672,
+          "bootstrap_95_ci": [
+            -0.02988905713339347,
+            0.0225956171880896
+          ]
+        },
+        "auroc": {
+          "mean": -0.0033057586806486848,
+          "bootstrap_95_ci": [
+            -0.004754523701337776,
+            -0.0015728646258057033
+          ]
+        },
+        "auprc": {
+          "mean": -0.00681302395808574,
+          "bootstrap_95_ci": [
+            -0.01019889134712626,
+            -0.002963789914339587
+          ]
+        }
+      }
+    }
+  },
+  "excluded": [
+    "raw Synthea export",
+    "per-site CSV files",
+    "gold_truth.jsonl"
+  ]
+}

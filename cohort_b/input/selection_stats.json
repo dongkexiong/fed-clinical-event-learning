@@ -1,0 +1,11 @@
+{
+  "conditions.csv": 11367,
+  "observations.csv": 28800,
+  "encounters.csv": 11445,
+  "medications.csv": 8710,
+  "procedures.csv": 11297,
+  "allergies.csv": 737,
+  "immunizations.csv": 5736,
+  "patients.csv": 1152,
+  "positive_patients": 269
+}

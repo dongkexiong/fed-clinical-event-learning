@@ -1,0 +1,75 @@
+{
+  "truth_path": "D:\\work\\2021\u5de5\u4f5c\\\u535a\u58eb\\\u6bd5\u4e1a\u8bba\u6587\\\u5c0f\u8bba\u6587\\\u8054\u90a6\u6570\u636e\u878d\u5408\\manuscripts\\applsci_format\\cohort_b\\results\\missing_10\\seed_11\\gold_truth.jsonl",
+  "sites_dir": "D:\\work\\2021\u5de5\u4f5c\\\u535a\u58eb\\\u6bd5\u4e1a\u8bba\u6587\\\u5c0f\u8bba\u6587\\\u8054\u90a6\u6570\u636e\u878d\u5408\\manuscripts\\applsci_format\\cohort_b\\results\\missing_10\\seed_11\\sites",
+  "entity_alignment": {
+    "raw": {
+      "aligned": false,
+      "threshold": 0.5,
+      "pairs": 7832027,
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 6774,
+      "true_negative": 7825253,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "synthetic_ground_truth": true
+    },
+    "aligned": {
+      "aligned": true,
+      "threshold": 0.5,
+      "pairs": 7832027,
+      "true_positive": 6774,
+      "false_positive": 253676,
+      "false_negative": 0,
+      "true_negative": 7571577,
+      "precision": 0.026008830869648687,
+      "recall": 1.0,
+      "f1": 0.050699039008472294,
+      "synthetic_ground_truth": true
+    },
+    "mutual_best": {
+      "method": "mutual_unique_best_jaccard",
+      "aligned": true,
+      "threshold": 0.5,
+      "pairs": 7832027,
+      "predicted_pairs": 6688,
+      "true_positive": 6526,
+      "false_positive": 162,
+      "false_negative": 248,
+      "true_negative": 7825091,
+      "precision": 0.9757775119617225,
+      "recall": 0.9633894301741954,
+      "f1": 0.9695439013519536,
+      "synthetic_ground_truth": true
+    },
+    "noncondition_mutual_best": {
+      "candidate_pairs": 7832027,
+      "predicted_pairs": 6550,
+      "profiles": 4425,
+      "sketch_digest_bytes": 10858752,
+      "excluded_linkage_event_types": [
+        "condition"
+      ],
+      "threshold": 0.5,
+      "method": "noncondition_mutual_best",
+      "true_positive": 6334,
+      "false_positive": 216,
+      "false_negative": 440,
+      "precision": 0.9670229007633587,
+      "recall": 0.9350457632122823,
+      "f1": 0.9507655358751125,
+      "synthetic_ground_truth": true
+    }
+  },
+  "duplicate_detection": {
+    "records": 309683,
+    "truth_duplicates": 14643,
+    "detected_duplicates": 13933,
+    "unresolved_missing_patient_records": 15391,
+    "precision": 0.9980621545969999,
+    "recall": 0.9496687837191832,
+    "f1": 0.9732642777155655,
+    "synthetic_ground_truth": true
+  }
+}

@@ -1,0 +1,4 @@
+START,STOP,PATIENT,ENCOUNTER,CODE,DESCRIPTION
+2020-01-01,2020-01-05,p1,e1,I10,Essential hypertension
+2020-02-01,2020-02-05,p2,e2,E11,Type 2 diabetes mellitus
+2020-03-01,2020-03-05,p3,e3,J06,Acute upper respiratory infection

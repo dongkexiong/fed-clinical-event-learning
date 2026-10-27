@@ -1,0 +1,4 @@
+# Versions used in the archived v3 experiment (Python 3.12.7).
+# Training needs NumPy; Matplotlib is used only for the standalone figures.
+numpy==2.4.4
+matplotlib==3.10.8

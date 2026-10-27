@@ -1,0 +1,19 @@
+{
+  "description": "Exact selected synthetic CSV inputs included under data/; source archive and JAR hashes record upstream provenance only.",
+  "source_archive_sha256": "c2d1c4023d2bddf173b15cbb8d0d1802c63226b3ef888dd6166c29654300f145",
+  "runnable_synthea_jar_sha256": "37596e412f9095164711d2d29b0a2466934a42c846c67551b1e45b1ec95fa7b6",
+  "selected_input": {
+    "patient_count": 1155,
+    "retained_event_count": 78515,
+    "files": {
+      "allergies.csv": "2991b338e338a6b63d481c7f6c0ae9f0b595d3d00d60b72bc97b153d9788f202",
+      "conditions.csv": "4f798c97afe6d73fe2ce66ec099764ade152c69e4025c419b67c417eeb47af65",
+      "encounters.csv": "a231f678e6ec724db99b9597df5342dac6dddd487fb5387d7a8839fdc076d850",
+      "immunizations.csv": "0e6901541507f6f80ee48899af7986c2fe8b9a377b909eb2733a3cf146e3b0ec",
+      "medications.csv": "8d590d0184546d1392fdf350cff66aa48e70c50a02cd6ed97ddb2b1fef82dc40",
+      "observations.csv": "b5d08d96a145818506b70b57c29613a2144b898b5d5093d06bf2cd1ba193e871",
+      "patients.csv": "1ddbd4fe98207a6e553e4f3aa8b62878bc2411344717775634ba18aa6bdb13cc",
+      "procedures.csv": "686ace6d791ded7445a4ec15535e03ab0121359d2cd4005e18a2217b77e95f34"
+    }
+  }
+}

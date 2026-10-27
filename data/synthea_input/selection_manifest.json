@@ -1,0 +1,66 @@
+{
+  "source": "Synthea CSV export used to create this selected input",
+  "rules": {
+    "target_condition_rows": "all descriptions containing hypertension",
+    "other_rows": "first fixed cap per patient in source order"
+  },
+  "caps": {
+    "conditions.csv": 10,
+    "observations.csv": 25,
+    "encounters.csv": 10,
+    "medications.csv": 10,
+    "procedures.csv": 10,
+    "allergies.csv": 5,
+    "immunizations.csv": 5
+  },
+  "stats": {
+    "conditions.csv": {
+      "input_rows": 42457,
+      "output_rows": 11448,
+      "cap": 10
+    },
+    "observations.csv": {
+      "input_rows": 886765,
+      "output_rows": 28875,
+      "cap": 25
+    },
+    "encounters.csv": {
+      "input_rows": 68395,
+      "output_rows": 11480,
+      "cap": 10
+    },
+    "medications.csv": {
+      "input_rows": 60205,
+      "output_rows": 8867,
+      "cap": 10
+    },
+    "procedures.csv": {
+      "input_rows": 187784,
+      "output_rows": 11338,
+      "cap": 10
+    },
+    "allergies.csv": {
+      "input_rows": 1112,
+      "output_rows": 747,
+      "cap": 5
+    },
+    "immunizations.csv": {
+      "input_rows": 16719,
+      "output_rows": 5760,
+      "cap": 5
+    },
+    "patients.csv": {
+      "output_rows": 1155
+    }
+  },
+  "sha256": {
+    "allergies.csv": "2991b338e338a6b63d481c7f6c0ae9f0b595d3d00d60b72bc97b153d9788f202",
+    "conditions.csv": "4f798c97afe6d73fe2ce66ec099764ade152c69e4025c419b67c417eeb47af65",
+    "encounters.csv": "a231f678e6ec724db99b9597df5342dac6dddd487fb5387d7a8839fdc076d850",
+    "immunizations.csv": "0e6901541507f6f80ee48899af7986c2fe8b9a377b909eb2733a3cf146e3b0ec",
+    "medications.csv": "8d590d0184546d1392fdf350cff66aa48e70c50a02cd6ed97ddb2b1fef82dc40",
+    "observations.csv": "b5d08d96a145818506b70b57c29613a2144b898b5d5093d06bf2cd1ba193e871",
+    "patients.csv": "1ddbd4fe98207a6e553e4f3aa8b62878bc2411344717775634ba18aa6bdb13cc",
+    "procedures.csv": "686ace6d791ded7445a4ec15535e03ab0121359d2cd4005e18a2217b77e95f34"
+  }
+}

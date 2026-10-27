@@ -1,0 +1,41 @@
+{
+  "valid": true,
+  "sites": [
+    {
+      "path": "D:\\work\\2021\u5de5\u4f5c\\\u535a\u58eb\\\u6bd5\u4e1a\u8bba\u6587\\\u5c0f\u8bba\u6587\\\u8054\u90a6\u6570\u636e\u878d\u5408\\manuscripts\\applsci_format\\cohort_b\\results\\missing_30\\seed_55\\sites\\site_1.jsonl",
+      "records": 62168,
+      "valid": true,
+      "errors": []
+    },
+    {
+      "path": "D:\\work\\2021\u5de5\u4f5c\\\u535a\u58eb\\\u6bd5\u4e1a\u8bba\u6587\\\u5c0f\u8bba\u6587\\\u8054\u90a6\u6570\u636e\u878d\u5408\\manuscripts\\applsci_format\\cohort_b\\results\\missing_30\\seed_55\\sites\\site_2.jsonl",
+      "records": 61372,
+      "valid": true,
+      "errors": []
+    },
+    {
+      "path": "D:\\work\\2021\u5de5\u4f5c\\\u535a\u58eb\\\u6bd5\u4e1a\u8bba\u6587\\\u5c0f\u8bba\u6587\\\u8054\u90a6\u6570\u636e\u878d\u5408\\manuscripts\\applsci_format\\cohort_b\\results\\missing_30\\seed_55\\sites\\site_3.jsonl",
+      "records": 62909,
+      "valid": true,
+      "errors": []
+    },
+    {
+      "path": "D:\\work\\2021\u5de5\u4f5c\\\u535a\u58eb\\\u6bd5\u4e1a\u8bba\u6587\\\u5c0f\u8bba\u6587\\\u8054\u90a6\u6570\u636e\u878d\u5408\\manuscripts\\applsci_format\\cohort_b\\results\\missing_30\\seed_55\\sites\\site_4.jsonl",
+      "records": 60749,
+      "valid": true,
+      "errors": []
+    },
+    {
+      "path": "D:\\work\\2021\u5de5\u4f5c\\\u535a\u58eb\\\u6bd5\u4e1a\u8bba\u6587\\\u5c0f\u8bba\u6587\\\u8054\u90a6\u6570\u636e\u878d\u5408\\manuscripts\\applsci_format\\cohort_b\\results\\missing_30\\seed_55\\sites\\site_5.jsonl",
+      "records": 59984,
+      "valid": true,
+      "errors": []
+    }
+  ],
+  "truth": {
+    "path": "D:\\work\\2021\u5de5\u4f5c\\\u535a\u58eb\\\u6bd5\u4e1a\u8bba\u6587\\\u5c0f\u8bba\u6587\\\u8054\u90a6\u6570\u636e\u878d\u5408\\manuscripts\\applsci_format\\cohort_b\\results\\missing_30\\seed_55\\gold_truth.jsonl",
+    "records": 307182,
+    "valid": true,
+    "errors": []
+  }
+}
